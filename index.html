@@ -5,28 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stick Lab</title>
-    <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://publish-guide.s3.ap-northeast-2.amazonaws.com/scripts/bs.js"></script>
 </head>
 
 <style>
-    div[aria-hidden=false] {
+    div[ aria-hidden = false ] {
         display: block;
     }
 
-    div[aria-hidden=true] {
+    div[ aria-hidden = true ] {
         display: none;
     }
 </style>
 
 <body>
     <!-- modal[s] -->
-    <button class="modal__btn" data-toggle="modal" data-target="modal1">Modal Open</button>
+    <button class="modal__btn--open" data-toggle="modal" data-target="modal1">Modal Open</button>
 
     <div id="modal1" class="modal__content" aria-hidden="true">
         <div class="modal__inner">
+            <button class="modal__btn--close" data-toggle="modal" data-target="modal1"></button>
             <p>Modal Contents</p>
         </div>
     </div>
@@ -47,7 +47,7 @@
             </li> 
         </ul>
 
-        <div class="tab__content" id="pills-tabContent">
+        <div id="pills-tabContent" class="tab__content">
             <div id="pills-tab1" class="tab-pane fade show active" aria-hidden="false">
                 <div class="tab__image">
                     <img src="./assets/image/pink.jpg" alt="pink">
@@ -77,12 +77,31 @@
     <!-- tab[e] -->
 
 
-    <div id="modal" role="dialog" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <!-- 24시간 열지 않기[s] -->
+    <div id="modal" role="dialog" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="false">
         <div>
             <!-- data-toggle="cookie", data-key 는 모달과 동일할 필요는 없다. 식별 가능한 쿠키 토큰 -->
             <!-- data-expired 는 일 단위로 입력한다. data-confirm 은 클릭시 confirm 이 필요하다면 넣는다. 필요없으면 제거. -->
             <button type="button" data-toggle="cookie" data-key="modal-1" data-expired="1" data-confirm="24시간동안 안볼래요 ?">24시간 보지않기</button>
         </div>
     </div>
+    <!-- 24시간 열지 않기[ㄷ] -->
+
+
+    <!-- selectbox[s] -->
+    <select class="selectbox" role="listbox" data-control="select2" data-placeholder="셀렉트 박스" data-hide-search="true">
+        <option>전체</option>
+        <option>옵션 1</option>
+        <option>옵션 2</option>
+        <option disabled="disabled">옵션 3</option>
+    </select>
+    <!-- selectbox[s] -->
+
+
+    <!-- datepicker[s] -->
+    <div class="datepicker">
+        <input data-control="datepicker" data-min-date="1999-01-01" data-mode="single | multiple | range">
+    </div>
+    <!-- datepicker[e] -->
 </body>
 </html>

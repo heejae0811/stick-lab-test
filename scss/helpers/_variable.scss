@@ -1,0 +1,44 @@
+// main color
+$primary: #DA291C;
+$primaryDark: #AD1A0F;
+$white: #FFF;
+$black: #000;
+
+// text color
+$baseColor: #222;
+$textColor: #444;
+
+// border color
+$normalBorder: #BBB;
+$activeBorder: #222;
+
+// background color
+$lightGreyBg: #F6F6F6;
+
+
+// display flex
+$displayFlexStart: flex, start, start;
+$displayInlineFlexStart: inline-flex, start, start;
+
+$displayFlexCenterStart: flex, center, start;
+$displayInlineFlexCenterStart: inline-flex, center, start;
+
+$displayFlexStartCenter: flex, start, center;
+$displayFlexStartEnd: flex, start, end;
+
+$displayFlexEnd: flex, end, end;
+$displayFlexEndCenter: flex, end, center;
+$displayInlineFlexEnd: inline-flex, end, end;
+
+$displayFlexCenter: flex, center, center;
+$displayInlineFlexCenter: inline-flex, center, center;
+
+$displayFlexBetweenStart: flex, space-between, start;
+$displayInlineFlexBetweenStart: inline-flex, space-between, start;
+
+$displayFlexBetweenCenter: flex, space-between, center;
+$displayInlineFlexBetweenCenter: inline-flex, space-between, center;
+
+
+// animation cubic-bezier
+$bounce: cubic-bezier(.19,.58,.63,.98);

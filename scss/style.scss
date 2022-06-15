@@ -1,5 +1,10 @@
+@import "./helpers/flex";
+@import "./helpers/icon";
+@import "./helpers/variable";
+
+
 // modal
-.modal__btn {
+.modal__btn--open {
     width: 150px;
     height: 50px;
     text-align: center;
@@ -27,7 +32,14 @@
         width: 500px;
         height: 500px;
         margin: auto;
-        background-color: #fff;
+        padding: 20px;
+        background-color: $white;
+
+        .modal__btn--close {
+            @include icon-close(20px, 2px, $black, 0, inline-block, absolute);
+            top: 20px;
+            right: 20px;
+        }
     }
 }
 
@@ -39,9 +51,7 @@
     border: 1px solid #222;
 
     ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include display-flex($displayFlexBetweenStart...);
         border-bottom: 1px solid #222;
     
         li {
@@ -67,4 +77,20 @@
     .tab__content {
         padding: 20px;
     }
+}
+
+
+// select box
+.selectbox {
+    width: 150px;
+    height: 50px;
+}
+
+
+// date picker
+.datepicker {
+    display: block; 
+    width: 150px;
+    height: 50px;
+    border: 1px solid #000;
 }
